@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CR2FnSzbNY9n1vUhTkFv+xlkLCN55KGVFHXvFmp/2BjUBoyvWb+QEgTiCuKU49OpQrSAlwd27ifEcwfpQSSjeQ==",
+  "dgSpecHash": "wY9XwZRdN0zT7SfOsd62qnOnDi9JkRNpw4HhTNgF8+6jtmkWPR8L+J1G/6rm/L6KNXyN5obqEAqFhvulM4zNbQ==",
   "success": true,
   "projectFilePath": "/Users/sam.fallowfield/Documents/FinalProject/DvlaProject/DvlaProject.csproj",
   "expectedPackageFiles": [
@@ -98,10 +98,10 @@
     "/Users/sam.fallowfield/.nuget/packages/runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "/Users/sam.fallowfield/.nuget/packages/runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "/Users/sam.fallowfield/.nuget/packages/runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
-    "/Users/sam.fallowfield/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
-    "/Users/sam.fallowfield/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
-    "/Users/sam.fallowfield/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "/Users/sam.fallowfield/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
+    "/Users/sam.fallowfield/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "/Users/sam.fallowfield/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "/Users/sam.fallowfield/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "/Users/sam.fallowfield/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
     "/Users/sam.fallowfield/.nuget/packages/system.appcontext/4.3.0/system.appcontext.4.3.0.nupkg.sha512",
     "/Users/sam.fallowfield/.nuget/packages/system.buffers/4.3.0/system.buffers.4.3.0.nupkg.sha512",
     "/Users/sam.fallowfield/.nuget/packages/system.collections/4.3.0/system.collections.4.3.0.nupkg.sha512",
