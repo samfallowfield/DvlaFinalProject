@@ -1,4 +1,3 @@
-#nullable disable
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,27 +9,27 @@ using DvlaProject.Models;
 
 namespace DvlaProject.Controllers
 {
-    [Route("api/ClientDatas")]
+    [Route("api/[controller]")]
     [ApiController]
-    public class ClientDatasController : ControllerBase
+    public class ClientsDataController : ControllerBase
     {
         private readonly ClientContext _context;
 
-        public ClientDatasController(ClientContext context)
+        public ClientsDataController(ClientContext context)
         {
             _context = context;
         }
 
-        // GET: api/ClientDatas
+        // GET: api/ClientsData
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Client>>> GetClients()
         {
             return await _context.Clients.ToListAsync();
         }
 
-        // GET: api/ClientDatas/5
+        // GET: api/ClientsData/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Client>> GetClient(long id)
+        public async Task<ActionResult<Client>> GetClient(int id)
         {
             var client = await _context.Clients.FindAsync(id);
 
@@ -42,10 +41,10 @@ namespace DvlaProject.Controllers
             return client;
         }
 
-        // PUT: api/ClientDatas/5
+        // PUT: api/ClientsData/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutClient(long id, Client client)
+        public async Task<IActionResult> PutClient(int id, Client client)
         {
             if (id != client.Id)
             {
@@ -73,7 +72,7 @@ namespace DvlaProject.Controllers
             return NoContent();
         }
 
-        // POST: api/ClientDatas
+        // POST: api/ClientsData
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Client>> PostClient(Client client)
@@ -81,13 +80,12 @@ namespace DvlaProject.Controllers
             _context.Clients.Add(client);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetClient), new { id = client.Id }, client);
-
+            return CreatedAtAction("GetClient", new { id = client.Id }, client);
         }
 
-        // DELETE: api/ClientDatas/5
+        // DELETE: api/ClientsData/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteClient(long id)
+        public async Task<IActionResult> DeleteClient(int id)
         {
             var client = await _context.Clients.FindAsync(id);
             if (client == null)
@@ -101,7 +99,7 @@ namespace DvlaProject.Controllers
             return NoContent();
         }
 
-        private bool ClientExists(long id)
+        private bool ClientExists(int id)
         {
             return _context.Clients.Any(e => e.Id == id);
         }
