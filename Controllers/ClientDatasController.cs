@@ -10,7 +10,7 @@ using DvlaProject.Models;
 
 namespace DvlaProject.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/ClientDatas")]
     [ApiController]
     public class ClientDatasController : ControllerBase
     {
