@@ -1,11 +1,18 @@
 using Microsoft.EntityFrameworkCore;
 using DvlaProject.Models;
+using DvlaProject.Data;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+var connectionString = ConfigurationHelper.GetHerokuConnectionString();
+
+if (string.IsNullOrEmpty(connectionString)) {
+    connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+}
+
+// builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ClientContext>(options =>
     options.UseNpgsql(connectionString)
 );
