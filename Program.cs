@@ -1,6 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using DvlaProject.Models;
 using DvlaProject.Data;
+using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Cors.Infrastructure;
+using Microsoft.AspNetCore.Mvc;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,10 +15,17 @@ if (string.IsNullOrEmpty(connectionString)) {
     connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 }
 
+
 // builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ClientContext>(options =>
     options.UseNpgsql(connectionString)
 );
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+});
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<ClientContext>(opt =>
@@ -40,5 +50,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors("AllowAllOrigins");
 
 app.Run();
